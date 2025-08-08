@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserProfileOverlay from './UserProfileOverlay';
 
-const Sidebar = () => {
+const Sidebar = ({ onSandboxToggle, isSandboxMode }) => {
   const [showProfileOverlay, setShowProfileOverlay] = useState(false);
 
   const navItems = [
@@ -261,9 +261,11 @@ style={{
         </svg>
       </div>
       
-      <UserProfileOverlay 
+      <UserProfileOverlay
         isOpen={showProfileOverlay}
         onClose={() => setShowProfileOverlay(false)}
+        onSandboxToggle={onSandboxToggle}
+        isSandboxMode={isSandboxMode}
       />
     </div>
   );
