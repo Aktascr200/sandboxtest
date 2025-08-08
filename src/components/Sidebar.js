@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import UserProfileOverlay from './UserProfileOverlay';
 
 const Sidebar = () => {
+  const [showProfileOverlay, setShowProfileOverlay] = useState(false);
+
   const navItems = [
     { name: 'Dashboard', icon: '📊', active: true },
     { name: 'Tests', icon: '🧪', active: false },
@@ -41,7 +44,10 @@ const Sidebar = () => {
         ))}
       </div>
       
-      <div className="user-section">
+      <div
+        className="user-section"
+        onClick={() => setShowProfileOverlay(!showProfileOverlay)}
+      >
         <div className="user-avatar">JD</div>
         <div className="user-info">
           <div className="user-name">John Doe</div>
@@ -49,6 +55,11 @@ const Sidebar = () => {
         </div>
         <div style={{ color: '#9ca3af' }}>⌄</div>
       </div>
+
+      <UserProfileOverlay
+        isOpen={showProfileOverlay}
+        onClose={() => setShowProfileOverlay(false)}
+      />
     </div>
   );
 };
