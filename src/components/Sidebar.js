@@ -210,15 +210,9 @@ const Sidebar = () => {
             }
             
             return (
-              <div 
+              <div
                 key={index}
                 className={`nav-item ${item.active ? 'active' : ''}`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '16px',
-                  flex: '1 0 0'
-                }}
               >
                 <div className="nav-item-icon">{item.icon}</div>
                 <span style={{
@@ -244,11 +238,10 @@ const Sidebar = () => {
       <div 
         className="user-section"
         onClick={() => setShowProfileOverlay(!showProfileOverlay)}
-        style={{
+style={{
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center',
-          flex: '1 0 0'
+          alignItems: 'center'
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
