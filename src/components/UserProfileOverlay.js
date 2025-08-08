@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserProfileOverlay = ({ isOpen, onClose }) => {
+const UserProfileOverlay = ({ isOpen, onClose, onSandboxToggle, isSandboxMode }) => {
   if (!isOpen) return null;
 
   const menuItems = [
@@ -75,15 +75,25 @@ const UserProfileOverlay = ({ isOpen, onClose }) => {
 
         {/* Menu Items */}
         <div className="menu-items">
-          {menuItems.map((item, index) => (
-            <div 
-              key={index}
-              className={`menu-item ${item.isActive ? 'active' : ''}`}
-            >
-              <div className="menu-icon">{item.icon}</div>
-              <span className="menu-label">{item.label}</span>
-            </div>
-          ))}
+          {menuItems.map((item, index) => {
+            const isSandboxItem = item.label === 'Sandbox Mode';
+            return (
+              <div
+                key={index}
+                className={`menu-item ${item.isActive || (isSandboxItem && isSandboxMode) ? 'active' : ''}`}
+                onClick={() => {
+                  if (isSandboxItem) {
+                    onSandboxToggle();
+                    onClose();
+                  }
+                }}
+                style={{ cursor: isSandboxItem ? 'pointer' : 'default' }}
+              >
+                <div className="menu-icon">{item.icon}</div>
+                <span className="menu-label">{item.label}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
