@@ -1,14 +1,17 @@
 import React from 'react';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import DashboardContent from './components/DashboardContent';
+import './Dashboard.css';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Welcome to React</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+    <div className="dashboard-container">
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <DashboardContent />
+      </div>
     </div>
   );
 }
