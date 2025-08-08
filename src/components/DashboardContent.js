@@ -279,59 +279,62 @@ const DashboardContent = () => {
         </div>
       </div>
 
-      {/* Frameworks Section */}
-      <div className="frameworks-section">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px', alignSelf: 'stretch' }}>
-          <div className="card-title">Frameworks</div>
-          <a href="#" className="view-link">View All</a>
-        </div>
-        
-        <div className="frameworks-grid">
-          {frameworks.map((framework, index) => (
-            <div key={index} className="framework-item">
-              <div 
-                className="framework-badge" 
-                style={{ backgroundColor: framework.color }}
-              >
-                {framework.abbr}
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '4px', flex: '1 0 0' }}>
-                <div className="framework-name">{framework.name}</div>
-                <svg width="139" height="8" viewBox="0 0 139 9" fill="none">
-                  <rect y="0.5" width="139" height="8" rx="4" fill="#DDE4EB"/>
-                </svg>
-                <div className="framework-status">{framework.status}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Frameworks and Audits Side by Side */}
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '24px', alignSelf: 'stretch' }}>
+        {/* Frameworks Section */}
+        <div className="frameworks-section">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', alignSelf: 'stretch' }}>
+            <div className="card-title">Frameworks</div>
+            <a href="#" className="view-link">View All</a>
+          </div>
 
-      {/* Upcoming Audits */}
-      <div className="audits-section">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px', alignSelf: 'stretch' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: '1 0 0' }}>
-            <div className="card-title">Upcoming Audits</div>
+          <div className="frameworks-grid">
+            {frameworks.map((framework, index) => (
+              <div key={index} className="framework-item">
+                <div
+                  className="framework-badge"
+                  style={{ backgroundColor: framework.color }}
+                >
+                  {framework.abbr}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '4px', flex: '1 0 0' }}>
+                  <div className="framework-name">{framework.name}</div>
+                  <svg width="139" height="8" viewBox="0 0 139 9" fill="none">
+                    <rect y="0.5" width="139" height="8" rx="4" fill="#DDE4EB"/>
+                  </svg>
+                  <div className="framework-status">{framework.status}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        
-        <div style={{ display: 'flex', width: '216px', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-          <div className="empty-state">
-            <div className="empty-icon">
-              <svg width="250" height="200" viewBox="0 0 250 200" fill="none">
-                <g clipPath="url(#clip0_1_6645)">
-                  <rect width="250" height="200" fill="white"/>
-                  <rect y="0.449219" width="250" height="200" fill="white"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M207 65.4492C210.866 65.4492 214 68.5832 214 72.4492C214 76.3152 210.866 79.4492 207 79.4492H167C170.866 79.4492 174 82.5832 174 86.4492C174 90.3152 170.866 93.4492 167 93.4492H189C192.866 93.4492 196 96.5832 196 100.449C196 104.315 192.866 107.449 189 107.449H178.826C173.952 107.449 170 110.583 170 114.449C170 117.027 172 119.36 176 121.449C179.866 121.449 183 124.583 183 128.449C183 132.315 179.866 135.449 176 135.449H93C89.134 135.449 86 132.315 86 128.449C86 124.583 89.134 121.449 93 121.449H54C50.134 121.449 47 118.315 47 114.449C47 110.583 50.134 107.449 54 107.449H94C97.866 107.449 101 104.315 101 100.449C101 96.5832 97.866 93.4492 94 93.4492H69C65.134 93.4492 62 90.3152 62 86.4492C62 82.5832 65.134 79.4492 69 79.4492H109C105.134 79.4492 102 76.3152 102 72.4492C102 68.5832 105.134 65.4492 109 65.4492H207ZM207 93.4492C210.866 93.4492 214 96.5832 214 100.449C214 104.315 210.866 107.449 207 107.449C203.134 107.449 200 104.315 200 100.449C200 96.5832 203.134 93.4492 207 93.4492Z" fill="#F5F7FA"/>
-                  <path d="M124.797 89.3525C124.928 89.3163 125.067 89.3163 125.198 89.3525L162.196 99.5928C162.52 99.6828 162.745 99.9783 162.745 100.315V142.646C162.745 142.975 162.53 143.266 162.214 143.362L125.216 154.627C125.074 154.67 124.921 154.67 124.779 154.627L87.7806 143.362C87.4651 143.266 87.2494 142.975 87.2493 142.646V100.315C87.2493 99.9783 87.4743 99.6828 87.7991 99.5928L124.797 89.3525Z" fill="white" stroke="#606A73" strokeWidth="2.5" strokeLinejoin="round"/>
-                </g>
-              </svg>
+
+        {/* Upcoming Audits */}
+        <div className="audits-section">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', alignSelf: 'stretch' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: '1 0 0' }}>
+              <div className="card-title">Upcoming Audits</div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '16px' }}>
-              <div className="empty-text">
-                No upcoming audits. please make sure<br />
-                there are audit dates assigned to frameworks<br />
-                so that the calendar gets populated
+          </div>
+
+          <div style={{ display: 'flex', width: '216px', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+            <div className="empty-state">
+              <div className="empty-icon">
+                <svg width="250" height="200" viewBox="0 0 250 200" fill="none">
+                  <g clipPath="url(#clip0_1_6645)">
+                    <rect width="250" height="200" fill="white"/>
+                    <rect y="0.449219" width="250" height="200" fill="white"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M207 65.4492C210.866 65.4492 214 68.5832 214 72.4492C214 76.3152 210.866 79.4492 207 79.4492H167C170.866 79.4492 174 82.5832 174 86.4492C174 90.3152 170.866 93.4492 167 93.4492H189C192.866 93.4492 196 96.5832 196 100.449C196 104.315 192.866 107.449 189 107.449H178.826C173.952 107.449 170 110.583 170 114.449C170 117.027 172 119.36 176 121.449C179.866 121.449 183 124.583 183 128.449C183 132.315 179.866 135.449 176 135.449H93C89.134 135.449 86 132.315 86 128.449C86 124.583 89.134 121.449 93 121.449H54C50.134 121.449 47 118.315 47 114.449C47 110.583 50.134 107.449 54 107.449H94C97.866 107.449 101 104.315 101 100.449C101 96.5832 97.866 93.4492 94 93.4492H69C65.134 93.4492 62 90.3152 62 86.4492C62 82.5832 65.134 79.4492 69 79.4492H109C105.134 79.4492 102 76.3152 102 72.4492C102 68.5832 105.134 65.4492 109 65.4492H207ZM207 93.4492C210.866 93.4492 214 96.5832 214 100.449C214 104.315 210.866 107.449 207 107.449C203.134 107.449 200 104.315 200 100.449C200 96.5832 203.134 93.4492 207 93.4492Z" fill="#F5F7FA"/>
+                    <path d="M124.797 89.3525C124.928 89.3163 125.067 89.3163 125.198 89.3525L162.196 99.5928C162.52 99.6828 162.745 99.9783 162.745 100.315V142.646C162.745 142.975 162.53 143.266 162.214 143.362L125.216 154.627C125.074 154.67 124.921 154.67 124.779 154.627L87.7806 143.362C87.4651 143.266 87.2494 142.975 87.2493 142.646V100.315C87.2493 99.9783 87.4743 99.6828 87.7991 99.5928L124.797 89.3525Z" fill="white" stroke="#606A73" strokeWidth="2.5" strokeLinejoin="round"/>
+                  </g>
+                </svg>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '16px' }}>
+                <div className="empty-text">
+                  No upcoming audits. please make sure<br />
+                  there are audit dates assigned to frameworks<br />
+                  so that the calendar gets populated
+                </div>
               </div>
             </div>
           </div>
