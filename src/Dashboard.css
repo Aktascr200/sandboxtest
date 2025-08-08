@@ -422,3 +422,140 @@ body {
   border-radius: 8px;
   padding: 24px;
 }
+
+/* User Profile Overlay Styles */
+.overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 998;
+}
+
+.user-profile-overlay {
+  position: fixed;
+  bottom: 80px;
+  left: 32px;
+  width: 256px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ccf3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004257;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Rethink Sans', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-family: 'Rethink Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #13161a;
+  line-height: normal;
+}
+
+.profile-email {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #606a73;
+  line-height: normal;
+}
+
+.admin-tag {
+  background-color: #f7f5fb;
+  color: #695acc;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f9fafb;
+}
+
+.menu-item.active {
+  background-color: #f5f7fa;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu-label {
+  font-family: 'Rethink Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #13161a;
+  line-height: normal;
+}
+
+.user-section {
+  cursor: pointer;
+}
+
+.user-section:hover {
+  background-color: #f9fafb;
+}
