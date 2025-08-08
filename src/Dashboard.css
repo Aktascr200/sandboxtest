@@ -660,3 +660,20 @@ body {
 .user-section:hover {
   background-color: #f9fafb;
 }
+
+.user-avatar {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 7px 3.998px 7px 4.002px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #CCF3FF;
+  color: #004257;
+  text-align: center;
+  font-family: 'Rethink Sans';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
